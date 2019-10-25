@@ -76,7 +76,7 @@ def FileClose(file):
 def PipUpgrade():
     try:
         setDir = 'python '
-        setProxy = '--proxy=http://gateway.zscaler.net:9400 '
+        setProxy = '--proxy= '
         setTrust = '--trusted-host pypi.org --trusted-host files.pythonhosted.org '
         if os.system(sys.executable + ' -m pip install ' + setProxy + setTrust + '--upgrade pip') == 0:
             LogIt("a", "PipUpgrade : Upgrade Success")
@@ -109,8 +109,8 @@ def InstallPacks(pypack):
     try:
         # os.system(sys.executable[:-10] + 'Scripts\pip' + ' install' + pypack)
         setDir = 'Scripts\pip'
-        setProxy = ' --proxy=http://gateway.zscaler.net:9400 --trusted-host pypi.org'
-        setTrust = ' --trusted-host files.pythonhosted.org '
+        setProxy = ' --proxy= '
+        setTrust = ' --trusted-host pypi.org --trusted-host files.pythonhosted.org '
         if os.system(sys.executable[:-10] + setDir + ' install' + setProxy + setTrust + pypack) == 1:
             LogIt("a", "InstallPacks : " + pypack + " installation failed")
         LogIt("a", "InstallPacks : " + pypack + " Installation Completed : ")
