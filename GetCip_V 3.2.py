@@ -6,6 +6,9 @@
 ###############################################################################
 
 """
+CIP Analyzer		Arjun Muraleedharan			04-09-2019
+Description: The aim is to find ADD records sent down which do not get processed into the files. Then report the items which failed on their respective stores.
+
 VERSION 2.0 - Arjun M
 Organized inputs and outputs to separate directories. Planned archiving feature for future use.
 
